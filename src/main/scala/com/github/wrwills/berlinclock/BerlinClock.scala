@@ -25,7 +25,7 @@ case class BerlinClock(pumpOn: Boolean,
     (pumpOn.option(Yellow),
       List.fill(hours.fives)(Red),
       List.fill(hours.ones)(Red),
-      (1 to minutes.fives).toList.map(x => if (x % 3 == 2) Red else Yellow),
+      (1 to minutes.fives).toList.map(x => if (x % 3 == 0) Red else Yellow),
       List.fill(minutes.ones)(Yellow)
       )
 }
